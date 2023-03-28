@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#drop-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  margin: 50px auto;
+  padding: 2rem;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  font-size: 1.2em;
+  color: #ccc;
+
+  &.highlight {
+    border-color: #666;
+    color: #666;
+  }
+}
+
+.uploadedFile{
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.submit-btn{
+  margin-bottom: 50px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+
+pre{
+  text-align: left;
+  margin-left: 20px;
+}
+
+.delete-menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 20px;
+
+  input{
+    padding: 5px 8px;
+    cursor: pointer;
+  }
+  
+  button{
+    padding: 5px 20px;
+    cursor: pointer;
+  }
+
+}
