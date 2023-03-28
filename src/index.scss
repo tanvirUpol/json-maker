@@ -55,7 +55,6 @@ pre{
 
   input{
     padding: 5px 8px;
-    cursor: pointer;
   }
   
   button{
@@ -63,4 +62,52 @@ pre{
     cursor: pointer;
   }
 
+}
+
+.cards{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.card {
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 40px 20px;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+  width: 200px;
+  margin-bottom: 15px;
+  // cursor: pointer;
+  h4{
+    margin: 0;
+  }
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.icon-image{
+  width: 32px;
+  margin: 4px;
+  margin-bottom: 8px;
+  color: #666;
+  cursor: pointer;;
+}
+
+.trash-icon{
+  width: 24px;
+  color: #666;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  &:hover{
+    color: rgb(229, 46, 104);
+  }
 }
