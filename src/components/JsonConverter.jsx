@@ -52,7 +52,8 @@ const JsonConverter = () => {
                         const updateData = json.map((data) => {
                             return { ...data, image: "" };
                         });
-                        setJsonFile(updateData);
+                        const filteredJson = updateData.filter(data => data.Name);
+                        setJsonFile(filteredJson);
                     });
                 };
                 
@@ -70,7 +71,9 @@ const JsonConverter = () => {
                 const updateData = json.map((data) => {
                     return { ...data, image: "" };
                 });
-                setJsonFile(updateData);
+                const filteredJson = updateData.filter(data => data.Name);
+                setJsonFile(filteredJson);
+                // setJsonFile(updateData);
                 }
                 
             }
