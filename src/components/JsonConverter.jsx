@@ -53,7 +53,14 @@ const JsonConverter = () => {
                             return { ...data, image: "" };
                         });
                         const filteredJson = updateData.filter(data => data.Name);
-                        setJsonFile(filteredJson);
+                        // filter only name and image fields
+                        const finalJson = [];
+                        for (let i = 0; i < filteredJson.length; i++) {
+                            const { Name, image } = filteredJson[i];
+                            finalJson.push({ Name, image });
+                        }
+                        setJsonFile(finalJson);
+                        // setJsonFile(filteredJson);
                     });
                 };
                 
@@ -68,11 +75,20 @@ const JsonConverter = () => {
                 const sheetName = workbook.SheetNames[0];
                 const sheet = workbook.Sheets[sheetName];
                 json = XLSX.utils.sheet_to_json(sheet);
+                // add image field
                 const updateData = json.map((data) => {
                     return { ...data, image: "" };
                 });
+                // take Name column
                 const filteredJson = updateData.filter(data => data.Name);
-                setJsonFile(filteredJson);
+
+                // filter only name and image fields
+                const finalJson = [];
+                for (let i = 0; i < filteredJson.length; i++) {
+                    const { Name, image } = filteredJson[i];
+                    finalJson.push({ Name, image });
+                }
+                setJsonFile(finalJson);
                 // setJsonFile(updateData);
                 }
                 
